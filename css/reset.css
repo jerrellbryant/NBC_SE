@@ -1,0 +1,33 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-blue: #1B3348;
+    --light-blue: #1D8CB7;
+    --light-gray: #F2F3F4;
+    --green: #1AAF4B;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Figtree', sans-serif;
+    background: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,45 @@
+@import url("reset.css");
+@import url("utilities.css");
+
+.hero {
+    margin-bottom: 50px;
+    background: url('../images/gradient-bg.jpg') no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background: url('../images/hero-bg.png') no-repeat;
+    background-size: contain;
+    background-position: right center;
+    height: 412px;
+    
+}
+
+.hero .hero-content {
+    width: 85%;
+}
+
+.hero .hero-text {
+    width: 85%;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.video .video-heading {
+    width: 700px;
+    margin-bottom: 20px;
+    /* padding-top: 50px; */
+}
+
+.video .video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+}
+
+.video .container p {
+    margin-bottom: 40px;
+}
