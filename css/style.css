@@ -1,6 +1,8 @@
 @import url("reset.css");
 @import url("utilities.css");
 
+/* Hero Section */
+
 .hero {
     margin-bottom: 50px;
     background: url('../images/gradient-bg.jpg') no-repeat;
@@ -28,6 +30,8 @@
     color: #fff;
 }
 
+/* Video Section */
+
 .video .video-heading {
     width: 700px;
     margin-bottom: 20px;
@@ -42,4 +46,114 @@
 
 .video .container p {
     margin-bottom: 40px;
+}
+
+.view-more {
+    margin-left: 10.5rem;
+}
+
+.view-more a,
+.view-more .view-more_arrow {
+    font-weight: 600;
+}
+
+.view-more i {
+    padding-left: 0.1rem;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.view-more-link:hover>.view-more_arrow {
+    padding-left: 0.25rem;
+}
+
+/* Footer Section */
+
+.footer {
+    padding: 40px 0;
+}
+
+.footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 60px;
+    justify-items: center;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.fa-social-media-bg-circle > i {
+    color: var(--white);
+    font-size: 1.25rem;
+    background: transparent;
+}
+
+.fa-social-media-bg-circle {
+    width: 30px;
+    height: 30px;
+    /* margin-right: 0.5rem; */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 33px;
+    vertical-align: middle;
+    display: inline-block;
+    transition: fill 0.25s ease-in-out;
+}
+
+.fa-social-media-bg-circle.facebook-circle {
+    background-color: #1877F2;
+}
+
+.fa-social-media-bg-circle.youtube-circle {
+    background-color: #D9252A;
+}
+
+.fa-social-media-bg-circle.instagram-circle {
+    background-color: #e4405f;
+}
+
+.fa-social-media-bg-circle.linkedin-circle {
+    background-color: #0073B1;
+}
+
+.fa-social-media-bg-circle {
+    margin:0 .40rem;
+}
+
+.fa-social-media-bg-circle:hover {
+    background-color: #68767f;
+}
+
+.socials ul {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container h5 {
+    letter-spacing: 0.1rem;
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.footer a {
+    color: #68767f;
+}
+
+.categories-links {
+    margin: 6.5rem 0 2rem 0;
+}
+
+.categories-links ul li:nth-child(9) {
+    margin-bottom: 1rem;
+}
+
+.categories-links > a{
+    color: var(--light-blue);
+    font-weight: 600;
 }
