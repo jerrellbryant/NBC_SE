@@ -44,6 +44,8 @@
     padding-top: 10px;
 }
 
+
+
 /* containers */
 
 .container {
@@ -122,7 +124,7 @@
     box-shadow: -4px 5px 2px -1px rgba(0, 0, 0, 0.2),
         0 1px 1px 0 rgba(0, 0, 0, 0.14),
         0 1px 3px 0 rgba(0, 0, 0, 0.12);
-    translate:translateY(-2px) ;
+    translate:translateY(-2px);
 }
 
 
@@ -153,6 +155,12 @@ h6 {/*only used in footer */
 
 .p-lg { /*padding large */
     padding: 1.2rem 0 4rem 0;
+}
+
+.pt-m { padding-top: 4rem}
+
+.pb-xl {
+    padding-bottom: 13rem;
 }
 
 .mt-xl {

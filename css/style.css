@@ -1,5 +1,6 @@
 @import url("reset.css");
 @import url("utilities.css");
+@import url("mobile.css");
 
 /* Hero Section */
 
@@ -7,25 +8,24 @@
     margin-bottom: 50px;
     background: url('../images/gradient-bg.jpg') no-repeat;
     background-size: cover;
-    padding: 60px 0;
+    padding: 60px 20px;
 }
 
 .hero .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     background: url('../images/hero-bg.png') no-repeat;
-    background-size: contain;
+    /* background-size: contain; */
+    background-size: 450px;
     background-position: right center;
-    height: 412px;
-    
+    height: 500px;
 }
 
 .hero .hero-content {
-    width: 85%;
+    width: 75%;
 }
 
 .hero .hero-text {
-    width: 85%;
     margin-bottom: 20px;
     color: #fff;
 }
@@ -44,30 +44,12 @@
     grid-gap: 24px;
 }
 
+.video {
+     padding: 0px 20px;
+}
+
 .video .container p {
     margin-bottom: 40px;
-}
-
-.view-more {
-    margin-left: 10.5rem;
-}
-
-.view-more a,
-.view-more .view-more_arrow {
-    font-weight: 600;
-}
-
-.view-more i {
-    padding-left: 0.1rem;
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-}
-
-.view-more-link:hover>.view-more_arrow {
-    padding-left: 0.25rem;
 }
 
 /* Footer Section */
@@ -76,7 +58,7 @@
     padding: 40px 0;
 }
 
-.footer .footer-grid {
+.footer .footer-grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 60px;
@@ -145,6 +127,10 @@
     color: #68767f;
 }
 
+.footer a:hover {
+    text-decoration: underline;
+}
+
 .categories-links {
     margin: 6.5rem 0 2rem 0;
 }
@@ -156,4 +142,240 @@
 .categories-links > a{
     color: var(--light-blue);
     font-weight: 600;
+    transition: all 0.2s;
+}
+
+.categories-links>a:hover {
+    border-bottom: 2px #FAB516 solid;
+    text-decoration: none;
+}
+
+/* Hamburger Button */
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    background: var(--dark-blue);
+    border-left: 2px solid var(--white);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li {
+    border-bottom: 1px solid var(--white);
+    margin-bottom: 15px;
+}
+
+.mobile-menu ul li:last-child {
+    border:none;
+    margin-top: 30px;
+}
+
+.mobile-menu ul li a {
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.view-more {
+    margin: 0.25rem 0 2rem auto;
+    font-size: 1rem;
+    text-align: end;
+    position: relative;
+}
+
+@media (max-width: 950px) {
+    .hero .container {
+        background-size: 330px;
+    }
+}
+
+@media (max-width: 770px) {
+
+    section {
+        overflow: hidden
+    }
+
+    .container {
+        padding: 0 25px;
+    }
+
+    .navbar {
+        padding: 2.5px 0;
+    }
+   
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    .navbar .main-menu {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        background: url('../images/gradient-bg.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr;
+        background-size: 550px;
+        background-position: center bottom;
+        height:880px;
+    }
+
+    .hero .hero-content, .video .video-content {
+        width: 100%;
+    }
+
+    .hero .hero-text, .video .video-text {
+        width: 100%;
+    }
+
+    /* Video */
+
+    .video .video-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .video .container {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    div.video-grid > div:nth-child(1), 
+    div.video-grid>div:nth-child(2), 
+    div.video-grid>div:nth-child(3) {
+        display: none;
+    }
+
+    div.card img {
+        width: 435px;
+    }
+
+        .view-more {
+            margin: 1rem 0 2rem auto;
+        }
+
+    /*footer */
+    .footer .logo {
+        order: 1;
+    }
+
+    .footer .more-info {
+        order: 3;
+        justify-self: left;
+    }
+
+    .footer .sports {
+        order: 2;
+        justify-self: left;
+    }
+
+    .footer .footer-grid {
+        grid-template-columns: 2fr;
+        grid-gap: 0px;
+    }
+
+    .categories-links {
+        margin-top: 0;
+    }
+
+    .footer .sports {
+        margin-top: 50px
+    }
+
+
+   /* text */
+  .text-xxl {
+        /* font-size: 2rem;
+       line-height: 1.2;*/
+       margin-top: 60px;
+   } 
+   .text-xl {
+       font-size: 1.5rem;
+       line-height: 1.2;
+       margin-top: 40px;
+   }
+
+   .text-lg {
+       /* font-size: 1.15rem; */
+       /* 20px */
+       line-height: 1.4;
+       font-weight: normal;
+       margin: 40px 0 10px 0;
+   }
+
+   .text-sm {
+       font-size: 0.9rem;
+       line-height: 1.4;
+       font-weight: normal;
+       margin: 10px 0 5px 0;
+   }
+}
+
+@media (max-width: 600px) {
+
+    .container, .video {
+            padding: 0 10px;
+        }
+
+    .hero .container {
+        /* grid-template-columns: 1fr; */
+        background-size: 300px;
+        /* background-position: center bottom; */
+        height: 600px;
+    }
+
+     .text-xxl {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-top: 60px;
+     }
+
+          /* .text-xl {
+           font-size: 1.5rem;
+           line-height: 1.2;
+           margin-top: 40px;
+       } */
+
+        .text-lg {
+            font-size: 1.15rem;
+            /* 20px */
+            line-height: 1.4;
+            /* font-weight: normal;
+            margin: 40px 0 10px 0; */
+        }
 }

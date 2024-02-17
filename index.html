@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SportsEngine: Training Camp</title>
+    <title>SE:Training Camp - Concept</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <script src="js/mobile.js" defer></script>
   </head>
   <body>
     <nav class="navbar">
@@ -48,11 +49,37 @@
             </li>
           </ul>
         </div>
+        <!-- Hamburger Button-->
+        <button id="hamburger-button" class="hamburger-button">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+        <!-- Mobile Menu Begins -->
+        <div class="mobile-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="javascript:void(0)">For Admins </a>
+            </li>
+
+            <li><a href="javascript:void(0)">For Team Staff</a></li>
+            <li><a href="javascript:void(0)">For Parents</a></li>
+            <li>
+              <a
+                class="btn btn-podcast"
+                href="https://discover.sportsengineplay.com/for-the-love-of-sport-podcast"
+                >Podcast</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Mobile Menu Ends -->
       </div>
     </nav>
     <!-- Hero Begins-->
     <section class="hero">
-      <div class="container">
+      <div class="container mt-xl">
         <div class="hero-content">
           <h1 class="hero-heading text-xxl text-white">
             Welcome to Training Camp!
@@ -104,11 +131,12 @@
             <a href="javascript:void(0)" class="video-link"
               ><img src="images/team-video-4.png" alt="team video 4"
             /></a>
-            <span class="view-more"
-              ><a class="text-blue view-more-link" href="javascript:void(0)"
+            <div class="view-more">
+              <a class="text-blue view-more-link" href="javascript:void(0)"
                 >View more&nbsp
-                <i class="view-more_arrow fas fa-chevron-right"></i></a
-            ></span>
+                <i class="view-more_arrow fas fa-chevron-right"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -116,9 +144,11 @@
     <!-- video section 1 Ends-->
 
     <!-- video section 2 Begins-->
-    <section class="video gray-bg p-lg">
+    <section class="video mb-lg gray-bg">
       <div class="container">
-        <h3 class="video-heading text-xl">Training Camp for Team Managers</h3>
+        <h3 class="video-heading text-xl pt-m">
+          Training Camp for Team Managers
+        </h3>
         <p>
           Coaches, volunteers, and staff all play a critical role in youth
           sports. In our team managers series, you can learn how to create
@@ -148,11 +178,13 @@
             <a href="javascript:void(0)" class="video-link"
               ><img src="images/managers-video-4.png" alt="managers video 4"
             /></a>
-            <span class="view-more"
-              ><a class="text-black view-more-link" href="javascript:void(0)"
+
+            <div class="view-more">
+              <a class="text-black view-more-link" href="javascript:void(0)"
                 >View more&nbsp
-                <i class="view-more_arrow fas fa-chevron-right"></i></a
-            ></span>
+                <i class="view-more_arrow fas fa-chevron-right"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -201,7 +233,7 @@
     <footer class="footer gray-bg mt-xl">
       <div class="container">
         <div class="footer-grid">
-          <div class="categories-links">
+          <div class="categories-links sports">
             <h6>SPORTS</h6>
             <ul>
               <li><a href="javascript:void(0)">Baseball</a></li>
@@ -216,7 +248,7 @@
             </ul>
             <a href="javascript:void(0)">View all sports</a>
           </div>
-          <div class="logo-container">
+          <div class="logo logo-container">
             <a href="index.html"
               ><img src="images/SportsEngine_logo_footer.png" alt="SE logo" />
             </a>
@@ -250,7 +282,7 @@
               </ul>
             </div>
           </div>
-          <div class="categories-links">
+          <div class="categories-links more-info">
             <h6>MORE</h6>
             <ul>
               <li><a href="javascript:void(0)">About SportsEngine.com</a></li>
